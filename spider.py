@@ -1,7 +1,5 @@
 import requests,re,json,os,random
 import threading
-import datetime
-
 class youjizz:
     def __init__(self):
         self.index_url='https://www.youjizz.com'
@@ -72,7 +70,7 @@ def download(url,tittle, num_thread = 10):
 def main():
     start=youjizz()
     flag=1
-    while True:
+    while flag<=2000:
         cat_url=start.cat_page(flag)
         print(cat_url)
         video_page_info=start.find_video_page(cat_url)
